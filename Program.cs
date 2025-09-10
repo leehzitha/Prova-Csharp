@@ -32,24 +32,24 @@ builder.Services.AddTransient<EditPasseioUseCase>();
 builder.Services.AddTransient<GetPasseiosUseCase>();
 
 var jwtSecret = Environment.GetEnvironmentVariable("JWT_SECRET");
-var keyBytes = Encoding.UTF8.GetBytes(jwtSecret);
-var key = new SymmetricSecurityKey(keyBytes);
+// var keyBytes = Encoding.UTF8.GetBytes(jwtSecret);
+// var key = new SymmetricSecurityKey(keyBytes);
 
 
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-    .AddJwtBearer(options =>
-    {
-        options.TokenValidationParameters = new()
-        {
-            ValidateIssuer = false,
-            ValidateAudience = false,
-            ValidIssuer = "dtaplace",
-            ValidateIssuerSigningKey = true,
-            ValidateLifetime = true,
-            ClockSkew = TimeSpan.Zero,
-            IssuerSigningKey = key,
-        };
-    });
+// builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+//     .AddJwtBearer(options =>
+//     {
+//         options.TokenValidationParameters = new()
+//         {
+//             ValidateIssuer = false,
+//             ValidateAudience = false,
+//             ValidIssuer = "Provinha",
+//             ValidateIssuerSigningKey = true,
+//             ValidateLifetime = true,
+//             ClockSkew = TimeSpan.Zero,
+//             IssuerSigningKey = key,
+//         };
+//     });
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
