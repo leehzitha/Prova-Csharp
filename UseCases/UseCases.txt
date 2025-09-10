@@ -1,0 +1,7 @@
+USER
+Login
+
+PASSEIO
+Create
+Edit
+Get

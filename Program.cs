@@ -1,6 +1,9 @@
+using Microsoft.EntityFrameworkCore;
+using prova.Models;
+
 var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
 
-app.MapGet("/", () => "Hello World!");
-
-app.Run();
+builder.Services.AddDbContext<ProvaDbContext>(options => {
+    var sqlConn = Environment.GetEnvironmentVariable("SQL_CONNECTION");
+    options.UseSqlServer(sqlConn);
+});
