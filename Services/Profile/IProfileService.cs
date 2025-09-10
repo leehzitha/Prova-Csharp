@@ -4,5 +4,6 @@ namespace prova.Services.Profile;
 
 public interface IProfileService
 {
-    Task<User?> GetProfile(string Username);
+    Task<User?> GetProfile(int ID);
+    Task<User?> GetProfileByUsername(string username);
 }
