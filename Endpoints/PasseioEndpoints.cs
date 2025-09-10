@@ -9,7 +9,7 @@ namespace prova.Endpoints;
 
 public static class PasseioEndpoints
 {
-    public static void ConfigureRoomEndpoints(this WebApplication app)
+    public static void ConfigurePasseioEndpoints(this WebApplication app)
     {
         app.MapGet("passeio", async (
             [FromBody] GetPasseiosPayload payload,

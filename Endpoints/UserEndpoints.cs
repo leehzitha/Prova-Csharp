@@ -5,7 +5,7 @@ namespace prova.Endpoints;
 
 public static class UserEndpoints
 {
-    public static void ConfigureRoomEndpoints(this WebApplication app)
+    public static void ConfigureUserEndpoints(this WebApplication app)
     {
         app.MapGet("login", async (
             [FromBody] LoginPayload payload,
