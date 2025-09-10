@@ -7,3 +7,5 @@ public class PasseioData
     public ICollection<string> PointNames { get; set; } = [];
     public string CreatorName { get; set; }
 }
+
+//
