@@ -1,5 +1,6 @@
 namespace prova;
 
+
 public record Result<T>(
     T Data,
     bool IsSuccess,
