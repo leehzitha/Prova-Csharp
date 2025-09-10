@@ -7,5 +7,6 @@ public class User
     public string Username { get; set; }
     public string Password { get; set; }
 
-    ICollection<Passeio> Passeios { get; set; } = [];
+
+    public ICollection<Passeio> Passeios { get; set; } = [];
 }

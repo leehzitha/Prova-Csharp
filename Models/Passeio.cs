@@ -9,6 +9,6 @@ public class Passeio
     public int CreatorID { get; set; }
     public required User User { get; set; }
 
-    ICollection<Ponto> Pontos { get; set; } = [];
-    
+    public ICollection<Ponto> Pontos { get; set; } = [];
+
 }
