@@ -10,4 +10,5 @@ public class Passeio
     public required User User { get; set; }
 
     ICollection<Ponto> Pontos { get; set; } = [];
+    
 }
