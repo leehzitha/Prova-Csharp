@@ -13,4 +13,7 @@ public record CreatePasseioPayload
     [MaxLength(200)]
     public string Description { get; set; }
 
+    [Required]
+    public int CreatorID { get; set; }
+
 }
